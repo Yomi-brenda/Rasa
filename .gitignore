@@ -1,0 +1,12 @@
+# Ignore virtual environments
+venv/
+*.pyc
+__pycache__/
+
+# Ignore model files
+models/
+*.tar.gz
+
+# Ignore cache and temporary files
+.rasa/cache/
+.env

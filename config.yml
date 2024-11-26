@@ -1,0 +1,22 @@
+version: "3.1"
+language: en
+pipeline:
+  - name: WhitespaceTokenizer
+  # - name: LanguageDetector
+  - name: RegexEntityExtractor
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true  # Add this line to constrain similar intents
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+  - name: FallbackClassifier
+    threshold: 0.3
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100

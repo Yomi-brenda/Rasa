@@ -1,0 +1,403 @@
+version: "3.1"
+
+stories:
+
+  - story: greet and offer help
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: handle bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - story: User asks about Toupesu
+    steps:
+      - intent: about_toupesu
+      - action: utter_about_toupesu
+
+  - story: Inform user about the benefits of Toupesu
+    steps:
+    - intent: benefits_of_toupesu
+    - action: utter_benefits_of_toupesu
+
+  - story: Help user contact support
+    steps:
+    - intent: contact_support
+    - action: utter_contact_support
+
+  - story: Explain how to use Toupesu
+    steps:
+    - intent: how_to_use_toupesu
+    - action: utter_how_to_use_toupesu
+
+  - story: Explain security features of Toupesu
+    steps:
+    - intent: security_features
+    - action: utter_security_features
+
+  - story: Describe services offered by Toupesu
+    steps:
+    - intent: services_offered
+    - action: utter_services_offered
+
+  - story: contribute to tontine flow
+    steps:
+      - intent: contribute_to_tontine
+      - action: utter_ask_tontine_name
+      - intent: provide_tontine_name
+        entities:
+          - tontine_name: "The tontine name is [Together We Can](tontine_name)"
+      - action: utter_ask_contribution_amount
+      - intent: provide_contribution_amount
+        entities:
+          - contribution_amount: 500
+      - action: utter_ask_user_id
+      - intent: provide_user_id
+        entities:
+          - user_id: "user001"
+      - action: utter_ask_contribution_confirmation
+      - intent: confirm_contribution
+      - action: action_contribute_to_tontine
+
+  - story: check balance story
+    steps:
+      - intent: check_balance
+      - action: utter_ask_user_id
+      - intent: provide_user_id
+        entities:
+          - user_id: "user002"
+      - action: action_check_balance
+      # - action: utter_show_balance  
+
+  - story: join tontine flow
+    steps:
+      - intent: join_tontine
+      - action: utter_ask_name_tontine
+      - intent: provide_name_tontine
+        entities:
+          - name_tontine: "Les Enfants Perdues"
+      - action: utter_ask_user_id
+      - intent: provide_user_id
+        entities:
+          - user_id: "12345"
+      - action: utter_ask_confirmation
+      - intent: confirm_join
+      - action: action_join_tontine
+
+  - story: create a new tontine
+    steps:
+      - intent: create_new_tontine
+      - action: utter_ask_tontine_new_name
+      - intent: provide_tontine_new_name
+        entities:
+          - tontine_new_name: " We’ll call this tontine Savings Group"
+      - action: utter_ask_tontine_type
+      - intent: provide_tontine_type
+        entities:
+          - tontine_type: "educational"
+      - action: utter_ask_tontine_duration
+      - intent: provide_tontine_duration
+        entities:
+          - tontine_duration: "12 months"
+      - action: utter_ask_contribution_frequency
+      - intent: provide_contribution_frequency
+        entities:
+          - contribution_frequency: "monthly"
+      - action: utter_ask_new_contribution_amount
+      - intent: provide_new_contribution_amount
+        entities:
+          - new_contribution_amount: 100000.0
+      - action: utter_ask_payout_strategy
+      - intent: provide_payout_strategy
+        entities:
+          - payout_strategy: "fixed order"
+      - action: utter_ask_purpose
+      - intent: provide_purpose
+        entities:
+          - purpose: "saving for a project"
+      - action: utter_ask_target_audience
+      - intent: provide_target_audience
+        entities:
+          - target_audience: "community members"
+      - action: utter_ask_starting_currency
+      - intent: provide_starting_currency
+        entities:
+          - starting_currency: "USD"
+      - action: utter_ask_amount_to_receive
+      - intent: provide_amount_to_receive
+        entities:
+          - amount_to_receive: 1000.0
+      - action: action_confirm_tontine_creation
+
+  - story: list tontine options
+    steps:
+      - intent: get_tontine_options
+      - action: utter_ask_tontine_type
+      - intent: provide_tontine_type
+        entities:
+          - tontine_type: "community"
+      - action: utter_ask_tontine_duration
+      - intent: provide_tontine_duration
+        entities:
+          - tontine_duration: "6 months"
+      - action: action_list_tontine_options
+      # - action: utter_list_tontine_options
+
+  - story: access open tontine services
+    steps:
+      - intent: access_open_tontine_services
+      - action: action_access_open_tontine_services
+      # - action: utter_list_tontine_options
+      - action: utter_ask_if_join_tontine
+      - intent: confirm
+      - action: action_join_tontine
+
+  - story: create project tontine
+    steps:
+      - intent: create_project_tontine
+      - action: utter_ask_project_name
+      - intent: provide_project_name
+        entities:
+          - project_name: "Project Hope"
+      - action: utter_ask_tontine_type
+      - intent: provide_tontine_type
+        entities:
+          - tontine_type: "Community"
+      - action: utter_ask_duration
+      - intent: provide_duration
+        entities:
+          - duration: "12 months"
+      - action: utter_ask_contribution_frequency
+      - intent: provide_contribution_frequency
+        entities:
+          - contribution_frequency: "annually"
+      - action: utter_ask_amount_contribution
+      - intent: provide_amount
+        entities:
+          - amount: 100000.0
+      - action: utter_ask_payout_strategy
+      - intent: provide_payout_strategy
+        entities:
+          - payout_strategy: "fixed order"
+      - action: utter_ask_purposes
+      - intent: provide_purposes
+        entities:
+          - purposes: "Community Development"     
+      - action: utter_ask_target_audience
+      - intent: provide_target_audience
+        entities:
+          - target_audience: "community members"
+      - action: utter_ask_starting_currency
+      - intent: provide_starting_currency
+        entities:
+          - starting_currency: "USD"
+      - action: utter_ask_amount_to_receive
+      - intent: provide_amount_to_receive
+        entities:
+          - amount_to_receive: 1000.0
+      - action: action_create_project_tontine
+
+  - story: contribute to project tontine
+    steps:
+      - intent: contribute_to_project_tontine
+      - action: utter_ask_project_name
+      - intent: provide_project_name
+        entities:
+          - project_name: "Community Health Fund"
+      - action: utter_ask_contribution_amount
+      - intent: provide_contribution_amount
+        entities:
+          - contribution_amount: 5000
+      - action: utter_confirm_project_contribution
+      - action: utter_ask_user_id
+      - intent: provide_user_id
+      - action: action_contribute_to_project_tontine
+
+  - story: make a swap request
+    steps:
+      - intent: make_swap_request
+      - action: utter_ask_starting_currency
+      - intent: provide_starting_currency
+        entities:
+          - starting_currency: "USD"
+      - action: utter_ask_target_currency
+      - intent: provide_target_currency
+        entities:
+          - target_currency: "EUR"
+      - action: utter_ask_starting_amount
+      - intent: provide_starting_amount
+        entities:
+          - starting_amount: 1000
+      - action: utter_ask_amount_to_receives
+      - intent: provide_amount_to_receive
+        entities:
+          - amount_to_receive: 950
+      - action: utter_confirm_swap_request
+      - action: action_make_swap_request
+      - action: utter_swap_success_confirmation
+
+  - story: list pending swaps
+    steps:
+      - intent: list_pending_swaps
+      - action: action_ask_swap_id
+      - intent: provide_swap_id
+        entities:
+          - swap_id: "dhu3y34w"
+      - action: action_list_pending_swaps
+
+  - story: Make a payment
+    steps:
+      - intent: make_payment
+      - action: utter_ask_phone_number
+      - intent: provide_phone_number
+        entities:
+          - phone_number: " +237 675505025"
+      - action: utter_ask_payment_amount
+      - intent: provide_payment_amount
+        entities:
+          - payment_amount: 1000
+      - action: utter_confirm_payment
+      - intent: confirm
+      - action: action_process_payment
+      - action: utter_payment_success
+      - intent: deny
+      - action: utter_payment_failed
+
+  - story: Account management flow
+    steps:
+      - intent: account_management
+      - action: utter_account_management
+
+  - story: Change password flow
+    steps:
+      - intent: change_password
+      - action: utter_ask_current_password
+      - intent: provide_current_password
+        entities:
+          - current_password: "oldpassword123"
+      - action: utter_ask_new_password
+      - intent: provide_new_password
+        entities:
+          - new_password: "freshstart"
+      - action: utter_confirm_password_change
+      - intent: confirm_password_change
+      - action: action_change_password
+
+  - story: Forgot password flow
+    steps:
+      - intent: forgot_password
+      - action: utter_ask_email_for_reset
+      - intent: provide_email
+        entities:
+          - email: "user@example.com"
+      - action: action_reset_password
+      - action: utter_password_reset_link_sent
+
+  - story: Edit name
+    steps:
+      - intent: edit_name
+      - action: utter_ask_email
+      - intent: provide_email
+        entities:
+          - email: "user@example.com"
+      - action: utter_ask_new_name
+      - intent: provide_new_name
+        entities:
+          - new_name: "John Doe"
+      - action: action_edit_name
+
+  - story: change language preference
+    steps:
+        - intent: change_language
+        - action: utter_ask_language
+        - intent: provide_language
+          entities:
+            - language: "English"
+        - action: utter_language_changed
+
+  - story: Top up balance
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: top_up_balance
+      - action: utter_ask_email
+      - intent: provide_email
+        entities:
+          - email: "user@example.com"
+      - action: utter_ask_top_up_amount
+      - intent: provide_top_up_amount
+        entities:
+          - top_up_amount: 100
+      - action: action_top_up_balance
+
+
+  - story: User provides withdrawal amount 
+    steps:
+      - intent: make_withdrawal
+      - action: utter_ask_email
+      - intent: provide_email
+        entities:
+          - email: "user@example.com"
+      - action: utter_ask_withdrawal_amount
+      - intent: provide_withdrawal_amount
+        entities:
+          - withdrawal_amount: 3000
+      - action: action_make_withdrawal
+
+  - story: User requests transaction list
+    steps:
+      - intent: list_transactions
+      - action: utter_ask_account_id
+      - intent: provide_account_id
+        entities:
+          - account_id: "A12345"
+      - action: action_list_transactions
+      - action: utter_list_transactions_success
+
+  - story: User files a complaint
+    steps:
+      - intent: file_complaint
+      - action: utter_ask_complaint_topic
+      - intent: provide_complaint_topic
+        entities:
+          - complaint_topic: "payment issue"
+      - action: action_file_complaint
+      - action: utter_complaint_success
+
+
+  - story: View pending swaps
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: view_pending_swaps
+      - action: action_get_pending_swaps
+
+  - story: Cancel a swap
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: view_pending_swaps
+      - action: action_get_pending_swaps
+      - intent: cancel_swap
+      - action: action_cancel_swap
+
+  - story: Confirm a swap
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: view_pending_swaps
+      - action: action_get_pending_swaps
+      - intent: confirm_swap
+      - action: action_confirm_swap
+
+  - story: Reject a swap
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: view_pending_swaps
+      - action: action_get_pending_swaps
+      - intent: reject_swap
+      - action: action_reject_swap
+  

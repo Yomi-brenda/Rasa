@@ -1,0 +1,24 @@
+version: "3.1"
+
+# rules:
+#   - rule: Respond to a greeting
+#     steps:
+#       - intent: greet
+#       - action: utter_greet
+
+rules:
+  # - rule: Detect language on first user message
+  #   steps:
+  #     - intent: greet  # Or any other intent that starts the conversation
+  #     - action: action_detect_language
+  #     - action: utter_greet
+
+  # - rule: Respond to bot questions
+  #   steps:
+  #     - intent: bot_challenge
+  #     - action: utter_iamabot
+
+  # - rule: Explain usage of Toupesu
+  #   steps:
+  #   - intent: how_to_use_toupesu
+  #   - action: utter_how_to_use_toupesu

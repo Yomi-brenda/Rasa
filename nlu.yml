@@ -1,0 +1,1083 @@
+version: "3.1"
+
+nlu:
+
+  - intent: greet
+    examples: |
+      - hello
+      - Bonjour
+      - Bonsoir
+      - Salut
+      - ufygdsfdtsdv
+      - jrjihdsd
+      - hi
+      - hey
+      - good morning
+      - good afternoon
+      - good evening
+
+  - intent: bot_challenge
+    examples: |
+      - Are you a bot?
+      - Are you human?
+      - What are you?
+      - Qui es-tu?
+      - Es-tu un robot?
+      - Are you real?
+      - Is this a bot or a real person?
+      - Who made you?
+      - Are you an AI?
+
+  - intent: about_toupesu
+    examples: |
+      - What is Toupesu?
+      - Tell me about Toupesu
+      - Can you explain Toupesu to me?
+      - I'd like to know more about Toupesu
+      - What does Toupesu do?
+      - Explain the purpose of Toupesu
+      - How does Toupesu work?
+      - Can you provide information about Toupesu?
+      - What services does Toupesu offer?
+      - I want details on Toupesu
+      - Describe Toupesu's mission
+      - What's the main goal of Toupesu?
+      - What can I do with Toupesu?
+      - Who can use Toupesu?
+      - How can Toupesu help me?
+
+  - intent: services_offered
+    examples: |
+      - What services does Toupesu provide?
+      - What can I do on Toupesu?
+      - What features does Toupesu have?
+      - Tell me about the services offered by Toupesu
+      - What are the available services on Toupesu?
+      - List the services Toupesu offers
+      - Can you explain Toupesu's main services?
+
+  - intent: how_to_use_toupesu
+    examples: |
+      - How do I use Toupesu?
+      - How can I get started with Toupesu?
+      - Can you guide me on using Toupesu?
+      - What are the steps to start using Toupesu?
+      - How does one use Toupesu?
+      - I’m new to Toupesu; how do I begin?
+      - Show me how to use Toupesu's features
+
+  - intent: contact_support
+    examples: |
+      - How do I contact Toupesu support?
+      - I need help with my account
+      - Can you connect me to customer service?
+      - Where can I get support on Toupesu?
+      - Who can I contact for help on Toupesu?
+      - How can I reach Toupesu's support team?
+      - I need assistance with Toupesu services
+
+  - intent: security_features
+    examples: |
+      - How secure is Toupesu?
+      - What security features does Toupesu have?
+      - Is my account safe on Toupesu?
+      - What measures are in place to protect my data on Toupesu?
+      - How does Toupesu keep my information secure?
+      - Tell me about Toupesu's security features
+      - Is Toupesu a secure platform?
+
+  - intent: benefits_of_toupesu
+    examples: |
+      - What are the benefits of using Toupesu?
+      - Why should I choose Toupesu?
+      - What makes Toupesu different from other platforms?
+      - What advantages does Toupesu offer?
+      - Why is Toupesu a good choice for me?
+      - How can Toupesu help me manage my finances?
+      - Tell me the benefits of using Toupesu
+
+  - intent: contribute_to_tontine
+    examples: |
+      - I want to contribute to a tontine
+      - I’d like to make a tontine contribution
+      - I am interested in making a contribution to a tontine
+      - Contribute to tontine
+      - I want to add funds to a tontine
+      - How can I contribute to a tontine?
+      - I need to contribute to my tontine
+      - I would like to add money to a tontine
+      - I’d like to put money into a tontine
+      - I want to support a tontine financially
+      - Help me make a contribution to a tontine
+      - Can I add a contribution to my tontine?
+      - Add my contribution to a tontine
+      - I'd like to contribute some money to a tontine
+      - I want to participate by contributing to a tontine
+      - How do I contribute to a tontine?
+      - Is it possible to contribute to a tontine now?
+      - I'd like to put in my share for a tontine
+      - I’d like to invest in a tontine
+      - Add my funds to the tontine
+      - Count me in for a tontine contribution
+      - I’d like to fund my tontine
+      - I want to make my contribution to the tontine
+      - Help me add funds to my tontine account
+      - I want to give my share for a tontine
+      - Add my money to the tontine
+      - How do I invest in a tontine?
+      - I am ready to contribute to a tontine
+      - Let me add my part to the tontine
+  
+  - intent: provide_tontine_name
+    examples: |
+      - [Les Enfants Perdues](tontine_name)
+      - The tontine name is [Together We Can](tontine_name)
+      - I’d like to use the tontine [Unity Fund](tontine_name)
+      - My tontine is called [Bright Future](tontine_name)
+      - I’ll contribute to [Community Growth](tontine_name)
+      - Let’s go with the tontine [Family First](tontine_name)
+      - Use the tontine name [Support Network](tontine_name) for my contribution
+      - Link my contribution to [Together We Can](tontine_name)
+      - Please add my funds to [Prosperity Group](tontine_name)
+      - My tontine is [Unity Path](tontine_name)
+      - Use [Helping Hands](tontine_name) as my tontine
+      - Connect my contribution to [Shared Goals](tontine_name)
+      - I’m participating in [United We Stand](tontine_name)
+      - My tontine is [Mutual Aid](tontine_name)
+      - Use the tontine [Strength Together](tontine_name) for me
+      - I’m in [Hope Fund](tontine_name)
+      - My tontine group is [Bright Path](tontine_name)
+      - My tontine is called [Lifelong Friends](tontine_name)
+
+  - intent: provide_contribution_amount
+    examples: |
+      - I'd like to contribute [500](contribution_amount)
+      - My contribution amount is [1000](contribution_amount)
+      - [250](contribution_amount) is my contribution
+      - [350](contribution_amount)
+      - I want to contribute [1500](contribution_amount)
+      - The amount I want to contribute is [200](contribution_amount)
+      - [750](contribution_amount) is how much I’ll contribute
+      - I am contributing [1200](contribution_amount)
+      - [600](contribution_amount) is my contribution amount
+      - I’ll put in [950](contribution_amount)
+      - The amount I want to add is [400](contribution_amount)
+      - I will contribute [850](contribution_amount)
+      - I am contributing [300](contribution_amount) to the tontine
+      - [1100](contribution_amount) is the contribution I’d like to make
+      - I want to put [5000](contribution_amount) in
+      - I’ll contribute [180](contribution_amount)
+      - My contribution will be [700](contribution_amount)
+      - I wish to contribute [1300](contribution_amount)
+      - I’ll add [950](contribution_amount)
+      - Contribute [600](contribution_amount) for me
+      - I’ll make a contribution of [2000](contribution_amount)
+
+  - intent: confirm_contribution
+    examples: |
+      - Confirm Contribution
+      - Make the contribution
+
+  - intent: check_balance
+    examples: |
+      - I want to check my balance
+      - Show my balance
+      - How much do I have?
+      - Please show me my balance
+      - What's my balance?
+      - Can you tell me my balance?
+      - How much money do I have?
+      - What’s in my account?
+      - Can I see my balance?
+      - Show me how much I have
+      - I need to check my account balance
+      - How much is in my account?
+      - What is my current balance?
+      - Please check my balance
+      - Do I have any funds?
+      - What’s my current balance?
+      - What’s my total balance?
+      - Let me see my balance
+      - How much is available in my account?
+      - Can you check my balance for me?
+
+  - intent: provide_user_id
+    examples: |
+      - My ID is [20398](user_id) 
+      - It’s [10234](user_id)
+      - User ID is [5689](user_id)
+      - [10234](user_id)
+      - I’m user number [40456](user_id) 
+      - My user ID is [78543](user_id)
+      - The ID I use is [33211](user_id)
+      - My registration number is [98765](user_id)
+      - I have ID [11223](user_id)
+      - [22334](user_id) is my user ID
+      - My ID number is [87654](user_id)
+      - I’m known by ID [99877](user_id)
+      - The ID for my account is [65432](user_id)
+
+  - intent: join_tontine
+    examples: |
+      - I want to join the tontine [My Tontine](name_tontine)
+      - Please add me to a tontine [Wealth Circle](name_tontine)
+      - Join me in [Family Savings](name_tontine)
+      - I’d like to be part of a tontine
+      - Can I join a tontine?
+      - I want to become a member of a tontine
+      - Enroll me in a tontine please 
+      - Count me in for a new tontine[The Growth Tontine](name_tontine)
+      - I wish to join [Tontine for Success](name_tontine)
+      - Add me to the [Unity Fund](name_tontine)
+      - Can you sign me up for [The Collective Pool](name_tontine)?
+      - I want to join the tontine [Legacy Builders](name_tontine)
+      - Register me for [Future Wealth](name_tontine)
+
+  - intent: provide_name_tontine
+    examples: |
+      - I'd like to join the tontine named [Family Savings](name_tontine)
+      - Join tontine [Investment Club](name_tontine)
+      - The tontine is [Future Builders](name_tontine)
+      - Please select tontine [Wealth Circle](name_tontine)
+      - The name of the tontine is [Support Fund](name_tontine)
+      - [Investment Club](name_tontine)
+      - Am joining [Investment Club](name_tontine)
+
+  - intent: confirm_join
+    examples: |
+      - Yes, I want to join
+      - Confirm joining
+      - Let’s proceed with my joining
+
+  - intent: create_new_tontine
+    examples: |
+      - I want to create a new tontine
+      - Start a new tontine
+      - Set up a new tontine
+      - Begin a new tontine
+      - Create a tontine for me
+      - I’d like to initiate a new tontine
+      - Let’s start a tontine
+      - Open a new tontine group
+      - I’d like to establish a new tontine
+      - Begin setting up a tontine
+      - Can we create a tontine?
+      - I want to start a tontine group
+      - Help me set up a tontine
+      - I’m creating a new tontine
+      - Initiate a tontine
+      - Start a fresh tontine
+      - Let’s launch a tontine
+      - I need a new tontine created
+      - Set a tontine up from scratch
+      - Open up a new tontine plan
+      - I’m interested in creating a tontine
+      - Establish a tontine for us
+      - I want a new tontine group
+      - I’d like to form a tontine
+      - Let’s create a tontine community
+
+  - intent: provide_tontine_new_name
+    examples: |
+      - Call it [Savings Group](tontine_new_name)
+      - The name should be [Investment Club](tontine_new_name)
+      - [Forever Young](tontine_new_name)
+      - I’ll name the tontine [Prosperity Group](tontine_name)
+      - Let’s label this tontine [Solidarity Fund](tontine_name)
+      - I choose [Unity Path](tontine_name) as the tontine name
+      - I am naming the tontine [Hope Rising](tontine_name)
+      - Set the name to [Helping Hands](tontine_name)
+      - Let's call it [One Team Fund](tontine_name)
+      - I'll name this one [Future Secure](tontine_name)
+      - Name it [Shared Goals](tontine_name)
+      - This tontine should be named [United We Stand](tontine_name)
+      - The tontine’s name will be [Mutual Aid](tontine_name)
+      - Let’s title it [Empowerment Fund](tontine_name)
+      - I'd like to set the tontine name to [Strength Together](tontine_name)
+      - Let's give it the name [Hope Fund](tontine_name)
+      - I’m calling it [Bright Path](tontine_name)
+      - Make the name [Better Future](tontine_name)
+      - I want it named [Friends and Family](tontine_name)
+      - We’ll call this tontine [Prosper Together](tontine_name)
+      - Label the tontine as [Lifelong Friends](tontine_name)
+
+  - intent: provide_tontine_type
+    examples: |
+      - I’m interested in an [educational](tontine_type) tontine
+      - This will be a [savings](tontine_type) tontine
+      - I would like a [charity](tontine_type) tontine
+      - Let’s make it a [social](tontine_type) tontine
+      - I want a [healthcare](tontine_type) tontine
+      - Set the tontine to be [business](tontine_type)
+      - It’s a [wedding](tontine_type) tontine
+      - My choice is a [community](tontine_type) tontine
+      - The tontine type is [holiday fund](tontine_type)
+      - I’m choosing a [retirement](tontine_type) tontine
+      - This tontine will be for [emergency fund](tontine_type)
+      - Make it a [student support](tontine_type) tontine
+      - I’d like it to be a [housing](tontine_type) tontine
+      - I am looking to create a [travel](tontine_type) tontine
+      - The tontine is for [welfare](tontine_type) purposes
+      - I want a tontine focused on [savings](tontine_type)
+      - Let’s go with a [social impact](tontine_type) tontine
+      - This tontine is for [community projects](tontine_type)
+      - [wedding](tontine_type) tontine
+      - The tontine should be for [cultural events](tontine_type)
+      - Set up a [research fund](tontine_type) tontine
+  
+  - intent: provide_tontine_duration
+    examples: |
+      - The tontine duration will be [12 months](tontine_duration)
+      - It should run for [6 months](tontine_duration)
+      - Let’s make it a [1-year](tontine_duration) tontine
+      - This tontine will last [2 years](tontine_duration)
+      - The duration I want is [18 months](tontine_duration)
+      - I would like it to be [3 years](tontine_duration)
+      - Set the duration to [5 months](tontine_duration)
+      - This tontine will run for [24 months](tontine_duration)
+      - The tontine period will be [9 months](tontine_duration)
+      - I’m choosing a duration of [10 months](tontine_duration)
+      - It will go for [4 years](tontine_duration)
+      - We’ll make it [2 months](tontine_duration)
+      - I want it to last [1 month](tontine_duration)
+      - The tontine should be for [7 months](tontine_duration)
+      - Make it [15 months](tontine_duration)
+      - Set the tontine period to [20 months](tontine_duration)
+      - [1-year](tontine_duration) tontine
+
+  - intent: provide_contribution_frequency
+    examples: |
+      - Contributions will be [weekly](contribution_frequency)
+      - Every [three months](contribution_frequency)
+      - It will be a [bi-weekly](contribution_frequency) contribution
+      - I'll contribute [annually](contribution_frequency)
+      - [quarterly](contribution_frequency) contributions
+      - Contributions are [twice a month](contribution_frequency)
+      - I’d like to contribute [every month](contribution_frequency)
+      - [daily](contribution_frequency) contributions
+      - Let’s set contributions to [every two weeks](contribution_frequency)
+      - I'll contribute [once a week](contribution_frequency)
+      - Make it [semi-annually](contribution_frequency)
+      - We’ll contribute [every 6 months](contribution_frequency)
+      - [bi-monthly](contribution_frequency) contributions
+      - I want contributions [every quarter](contribution_frequency)
+      - We’ll be contributing [each month](contribution_frequency)
+      - Let’s set it to [weekly](contribution_frequency)
+      - Set contributions to be [every other week](contribution_frequency)
+
+  - intent: provide_new_contribution_amount
+    examples: |
+      - The total contribution amount will be [1000000](new_contribution_amount)
+      - The total amount to contribute is [250000](new_contribution_amount)
+      - The total for the tontine is [150000](new_contribution_amount)
+      - We’ll aim for a total contribution of [75000](new_contribution_amount)
+      - The overall amount to be contributed is [1200](new_contribution_amount)
+      - Let’s set the total contribution to [3000](new_contribution_amount)
+      - The full contribution will be [6000](new_contribution_amount)
+      - Total amount to contribute is [100](new_contribution_amount)
+      - The total goal for the tontine is [500](new_contribution_amount)
+      - [1000000](new_contribution_amount) is the total amount
+
+  - intent: provide_payout_strategy
+    examples: |
+      - [equal distribution](payout_strategy)
+      - The payout strategy will be [equal distribution](payout_strategy)
+      - Payout will be based on [random selection](payout_strategy)
+      - We will use a [fixed order](payout_strategy) for payouts
+      - The payout will follow a [first-come-first-served](payout_strategy) strategy
+      - [Rotation-based](payout_strategy) payout strategy is what I prefer
+      - I’d like the payout to be [based on contribution amount](payout_strategy)
+      - Payouts will be [drawn randomly](payout_strategy)
+      - Use a [priority-based](payout_strategy) payout system
+      - Payout should be determined by [membership duration](payout_strategy)
+      - The payout strategy will be [based on points](payout_strategy)
+      - I suggest a [lottery-style](payout_strategy) payout strategy
+      - [Monthly installments](payout_strategy) will be the payout method
+      - The payout strategy will be [divided equally](payout_strategy)
+      - Payout will be [based on the order of joining](payout_strategy)
+      - I prefer a [proportional contribution](payout_strategy) payout method
+      - Payouts will be [based on the amount contributed](payout_strategy)
+  
+  - intent: provide_purpose
+    examples: |
+      - The tontine is designed to cover [school fees](purpose)
+      - Its primary goal is [building a family home](purpose)
+      - The purpose of this tontine is [financial independence during retirement](purpose)
+      - It’s focused on [medical treatments](purpose)
+      - [Hospital bills](purpose) are the main concern
+      - We plan to use it for [an international trip](purpose)
+      - The goal is to gather funds for [a wedding event](purpose)
+      - It’s aimed at [developing a new product line](purpose)
+      - We want to contribute towards [community development](purpose)
+      - This tontine seeks to create [a secure savings fund](purpose)
+      - The intention is to purchase [a family car](purpose)
+      - We’re working towards [launching a business startup](purpose)
+      - The tontine helps with [supporting dependents](purpose)
+      - It’s structured as a [charitable trust](purpose)
+      - This tontine aims to promote [scientific research](purpose)
+      - Its objective is to invest in [new real estate](purpose)
+      - This tontine will provide for [university tuition](purpose)
+      - It’s planned to finance [entertainment events](purpose)
+      - The funds are directed towards [emergency relief efforts](purpose)
+      - The tontine’s main goal is [purchasing farming tools](purpose)
+
+  - intent: provide_target_audience
+    examples: |
+      - The target audience is [family members](target_audience)
+      - [first-time home buyers](target_audience)
+      - This tontine is for [friends](target_audience)
+      - Audience includes [small business owners](target_audience)
+      - We're targeting [young professionals](target_audience)
+      - The tontine is aimed at [retirees](target_audience)
+      - This is for [students](target_audience)
+      - Target audience is [working parents](target_audience)
+      - The audience is [entrepreneurs](target_audience)
+      - This tontine is for [local community groups](target_audience)
+      - The target group is [investors](target_audience)
+      - We're focusing on [savings-minded individuals](target_audience)
+      - The tontine is intended for [women entrepreneurs](target_audience)
+      - Audience includes [church members](target_audience)
+      - Target audience is [non-profit organizations](target_audience)
+      - We're aiming at [neighborhood groups](target_audience)
+      - The tontine is for [professionals in the healthcare sector](target_audience)
+      - This tontine is for [low-income families](target_audience)
+      - Target audience is [students and recent graduates](target_audience)
+      - Audience includes [community development organizations](target_audience)
+      - This tontine is aimed at [first-time home buyers](target_audience)
+
+  - intent: provide_starting_currency
+    examples: |
+      - Starting currency is [USD](starting_currency)
+      - The currency will be [USD](starting_currency)
+      - We'll use [USD](starting_currency)
+      - The tontine will start with [USD](starting_currency)
+      - It’s in [USD](starting_currency)
+      - [USD](starting_currency)
+      - The starting currency is [USD](starting_currency)
+      - [ZAR](starting_currency) will be the currency
+      - We’ll use [ZAR](starting_currency) as the base currency
+      - Starting currency will be [ZAR](starting_currency)
+      - The tontine starts with [ZAR](starting_currency)
+      - We’ll begin with [ZAR](starting_currency)
+      - The currency of contribution is [ZAR](starting_currency)
+      - Start with [ZAR](starting_currency)
+      - Contributions will be in [ZAR](starting_currency)
+      - The currency used will be [ZAR](starting_currency)
+
+  - intent: provide_amount_to_receive
+    examples: |
+      - The amount to receive is [1500](amount_to_receive) dollars
+      - [6000](amount_to_receive)
+      - The payout amount is [3000](amount_to_receive)
+      - The payout to get is [10000](amount_to_receive)
+      - [500](amount_to_receive) is the expected payout
+      - The final amount to be received is [1200](amount_to_receive)
+      - The payout amount will be [4000](amount_to_receive)
+      - The payout will be [300](amount_to_receive) at the end
+      - The expected payout is [6000](amount_to_receive)
+      - The amount to be received is [9000](amount_to_receive)
+
+  - intent: get_tontine_options
+    examples: |
+      - What types of tontines are available?
+      - Can you show me the tontine options?
+      - What tontine options do I have?
+      - Show me the tontines for [family](tontine_type)
+      - What are the available tontines for [business](tontine_type)?
+      - Are there any tontines with a [yearly](tontine_duration) contribution frequency?
+      - I’d like to know the tontine options for [community](tontine_type) savings
+      - What are the tontines with [monthly](contribution_frequency) payments?
+      - List the tontines available with [short-term](tontine_duration) duration
+      - Can I find tontines for [long-term](tontine_duration) savings?
+      - Are there tontines available for [business](tontine_type) growth?
+      - Show me the available tontines with [weekly](contribution_frequency) contributions
+      - Do you have tontine options for [small groups](tontine_type)?
+      - What tontines are available with a [fixed](payout_strategy) payout strategy?
+
+  - intent: access_open_tontine_services
+    examples: |
+      - What services are available for open tontines?
+      - Show me the services for open tontines
+      - How can I access open tontine services?
+      - Tell me about the services for open tontines
+      - What can I do with an open tontine?
+      - Are there any services for open tontine groups?
+      - Access the available services for open tontines
+      - What are the features for open tontine participants?
+      - Can I view the services for open tontines?
+      - What actions can I take with open tontines?
+      - List services for open tontine groups
+      - How do I manage open tontine services?
+      - What benefits do open tontines offer?
+      - Access open tontine resources and services
+      - Provide me with services related to open tontines
+      - What options are available for open tontines?
+
+  - intent: confirm
+    examples: |
+      - Yes
+      - Join tontine
+      - Okay, let's proceed
+      - I’m in
+
+  - intent: create_project_tontine
+    examples: |
+      - I want to create a project tontine
+      - Start a project tontine for [medical aid](purpose)
+      - Create a new project tontine called [Health Initiative](project_name)
+      - Set up a project tontine for [community work](purpose)
+      - I want to create a project tontine named [Project Vision](project_name)
+      - Initiate a project tontine for [education](purpose) with a [monthly](contribution_frequency) contribution of [1000](contribution_amount)
+      - Let's create a [fundraising](purpose) project for [local entrepreneurs](target_audience)
+      - Start a new project tontine aimed at [environmental conservation](purpose)
+      - Organize a project tontine for [business development](purpose) with a [6-month](duration) duration
+      - Establish a project tontine for [medical expenses](purpose) with a contribution of [500](contribution_amount) per [month](contribution_frequency)
+      - Create a project tontine for [youth empowerment](purpose) called [Youth Power](project_name)
+      - Set up a project tontine for [small business support](purpose) for [local farmers](target_audience)
+      - Launch a [charity](purpose) project tontine with [monthly](contribution_frequency) payments of [300](contribution_amount)
+      - Develop a project tontine with a focus on [clean water](purpose) for [rural communities](target_audience)
+
+  - intent: provide_project_name
+    examples: |
+      - The project is called [Project Hope](project_name)
+      - [Community Fund](project_name)
+      - It’s [Health Aid](project_name)
+      - The project name is [Future Growth](project_name)
+      - I want to name the project [Vision for Change](project_name)
+      - [Unity Initiative](project_name) is the name of the project
+      - Name the project [Better Tomorrow](project_name)
+      - Let’s name the project [Global Outreach](project_name)
+      - The name of the project is [Empowerment Program](project_name)
+      - [Clean Water Access](project_name) is the project name
+      - Name the project [Sustainable Future](project_name)
+      - The project should be named [Rise Together](project_name)
+      - We’ll call this project [Health for All](project_name)
+      - I want this project named [Community Empowerment](project_name)
+      - The project name will be [Together We Rise](project_name)
+
+  - intent: provide_contribution_frequency
+    examples: |
+      - weekly
+      - I want to contribute monthly
+      - monthly
+      - every week
+      - bi-weekly
+      - yearly
+      - once a year
+      - annually
+      - twice a month
+      - once a week
+      - I'll contribute monthly
+      - fortnightly
+      - every month
+
+  - intent: provide_purposes
+    examples: |
+      - The project aims to support [educational scholarships](purposes)
+      - We want this project to help with [building a home](purposes)
+      - The purpose of this project is [retirement planning](purposes)
+      - [Medical bills](purposes) are the main goal of this project
+      - The objective is to raise funds for [a wedding celebration](purposes)
+      - This project will focus on [expanding a small business](purposes)
+      - This project aims to establish [a financial safety net](purposes)
+      - The intention is to [start an entrepreneurial venture](purposes)
+      - The funds will help [relatives in need](purposes)
+      - It’s organized as a [charitable fundraiser](purposes)
+      - The project is meant for [research and development](purposes)
+      - The initiative will support [local infrastructure projects](purposes)
+      - We’re using it to save for [college fees](purposes)
+      - This is to fund [cultural activities](purposes)
+      - The purpose is to create [a backup for unforeseen situations](purposes)
+      - This initiative focuses on [buying agricultural equipment](purposes)
+
+  - intent: provide_amount
+    examples: |
+      - [1000000](amount)
+      - total amount is [500](amount)
+      - The total for this project is [1200](amount)
+      - The amount to invest is [250](amount)
+      - Set the contribution to [10000](amount)
+      - Total contribution amount is [1200](amount)
+
+  - intent: provide_duration
+    examples: |
+      - The project duration is [6 months](duration)
+      - The duration should be [1 year](duration)
+      - [3-month](duration)
+      - [4 weeks](duration) duration
+      - It will run for [12 months](duration)
+      - Duration is [8 months](duration)
+      - The plan will last [9 months](duration)
+      - The term should be [2 months](duration)
+      - [10 days](duration) should be enough
+      - [6 weeks](duration) duration
+      - We will go for [1 month](duration)
+      - The project duration will be [18 months](duration)
+      - Let's set it to [4 years](duration)
+
+  - intent: contribute_to_project_tontine
+    examples: |
+      - I want to contribute to a project tontine
+      - Contribute to [Project Hope](project_name)
+      - Support the cause [Community Work](purpose)
+      - Contribute to project [12345](project_code) with [5000](contribution_amount)
+      - I'd like to donate to [Health Initiative](project_name)
+      - Contribute [2000](contribution_amount) to [Local Youth Initiative](project_name)      - Donate [1500](contribution_amount) to [Medical Aid Fund](project_name)
+      - I’d like to support [Environmental Protection](project_name) with [1000](contribution_amount)
+      - Add [500](contribution_amount) to [Community Fund](project_name)
+      - Support [Community Health](project_name) with [3000](contribution_amount)
+      - Donate [1000](contribution_amount) to [Clean Water Project](project_name)
+      - Contribute [500](contribution_amount) to [Local Education](project_name)
+      - I'm donating [1000](contribution_amount) to [Renewable Energy](project_name)
+      - I want to donate [2500](contribution_amount) to [Disaster Relief](project_name)
+      - I want to make a contribution to a project
+      - contribute to a tontine project
+      - I want to donate to a project tontine
+
+  - intent: provide_project_name
+    examples: |
+      - [Community services](project_name).
+      - The project name is [Les Enfants Perdues](project_name) project.
+      - I’d like to support the [Empower women](project_name) project.
+      - I’m making a contribution to the project [Youth Empowerment](project_name).
+      - I want to donate to [Health Outreach](project_name).
+      - [Community services](project_name)
+      - I am contributing to the [Clean Water Initiative](project_name).
+      - I’d like to join the [Tech for Change](project_name) project.
+      - I’m making a donation to [Green Future](project_name).
+
+  - intent: make_swap_request
+    examples: |
+      - I want to make a swap request
+      - Swap [10000](starting_amount) [USD](starting_currency) to [XAF](target_currency)
+      - Make a currency swap from [Euro](starting_currency) to [Dollar](target_currency)
+      - Swap request for [2000](starting_amount) to [XAF](target_currency)
+      - I want to swap [100](starting_amount) [USD](starting_currency) to [EUR](target_currency)
+      - Please convert [50](starting_amount) [XAF](starting_currency) to [ZAR](target_currency)
+      - How much will I receive if I swap [200](starting_amount) [USD](starting_currency) to [GBP](target_currency)
+      - Swap [300](starting_amount) of [USD](starting_currency) to [CAD](target_currency) for me
+      - I’d like to swap [500](starting_amount) [EUR](starting_currency) to [USD](target_currency)
+      - Can you help me convert [1500](starting_amount) [XAF](starting_currency) to [NGN](target_currency)?
+      - Exchange [3000](starting_amount) [GBP](starting_currency) to [USD](target_currency)
+      - Swap [2000](starting_amount) from [XAF](starting_currency) to [ZAR](target_currency)
+      - I want to exchange [500](starting_amount) [USD](starting_currency) into [JPY](target_currency)
+      - Convert [600](starting_amount) [ZAR](starting_currency) to [EUR](target_currency)
+      - I need to swap [1000](starting_amount) [AUD](starting_currency) to [USD](target_currency)
+
+  - intent: provide_starting_currency
+    examples: |
+      - My starting_currency will be [XAF](starting_currency)
+      - I will start with [XAF](starting_currency)
+      - I want to start with [XAF](starting_currency)
+      - The initial currency should be [XAF](starting_currency)
+      - [XAF](starting_currency)
+      - I want to swap from USD
+      - My starting currency is XAF
+      - Swap from GBP
+
+  - intent: provide_target_currency
+    examples: |
+      - My target_currency will be [EUR](target_currency)
+      - I want as target_currency [EUR](target_currency)
+      - I want to finish with [EUR](target_currency) XAF
+      - The final currency should be [XAF](target_currency)
+      - [EUR](target_currency)
+      - I want to receive EUR
+      - The target currency is USD
+      - I want to get JPY in return
+
+  - intent: provide_starting_amount
+    examples: |
+      - I want to start with [100](starting_amount)
+      - My starting amount is [50](starting_amount)
+      - [5000](starting_amount)
+      - [100.50](starting_amount)
+      - I am starting with [3000](starting_amount)
+      - I want to swap 1000
+      - Starting amount is 500
+      - Swap 200 USD
+
+  - intent: provide_amount_to_receive
+    examples: |
+      - I want to receive [100](amount_to_receive)
+      - I will get [5000](amount_to_receive)
+      - [5000](amount_to_receive)
+      - The amount to receive is [100.50](amount_to_receive)
+      - I expect to receive [200](amount_to_receive) 
+      - Can I receive [3000](amount_to_receive)?
+      - I would like to get [1500](amount_to_receive)
+      - The amount to receive will be [500](amount_to_receive)
+      - I need to receive [2500](amount_to_receive) XAF
+      - Please make it [1000](amount_to_receive) USD
+      - The payout amount is [10000](amount_to_receive)
+      - I want to receive [500](amount_to_receive) as my share
+      - My total payout will be [2000](amount_to_receive)
+      - The amount I will receive is [700](amount_to_receive) EUR
+
+  - intent: list_pending_swaps
+    examples: |
+      - List my pending swap requests
+      - Show pending swaps
+      - What swaps are still pending for code [ABC123](swap_id)?
+      - Display all my pending swaps
+      - Can you show my pending currency swaps?
+      - List the swap requests that are not yet completed
+      - Are there any swaps pending for me?
+      - Check for any pending swap requests for [ABC123](swap_id)
+      - Show me the swaps I have requested but haven’t been completed
+      - What are my current pending swaps?
+      - Please list the swaps I have requested that are still open
+      - Can you display the pending swaps for [ABCD](swap_id)?
+
+  - intent: provide_swap_id
+    examples: |
+      - My swap id is [ABC123](swap_id).
+      - The swap id is [XYZ789](swap_id).
+      - Can you help me with the pending swaps of [DEF987](swap_id)?
+      - The code for my swpas is [GHJ654](swap_id).
+      - I want to know about the pending swpas [KLM321](swap_id).
+      - [ABC123](swap_id)
+
+  - intent: make_payment
+    examples: |
+      - I want to send money to someone
+      - Can I pay another user?
+      - I need to transfer funds to a user
+      - I want to pay a Toupesu user with phone number [+1234567890](phone_number)
+
+  - intent: deny
+    examples: |
+      - No
+      - nope
+      - cancel
+
+  - intent: provide_payment_amount
+    examples: |
+      - I would like to pay [500](payment_amount) [dollars](currency)
+      - The amount is [250](payment_amount)
+      - I want to send [100](payment_amount) [euros](currency)
+      - I’ll be paying [75](payment_amount) [pounds](currency)
+      - My payment amount is [300](payment_amount)
+      - I'll pay [200](payment_amount)
+      - Let me pay [150](payment_amount) [dollars](currency)
+      - I want to make a payment of [120](payment_amount)
+      - I will contribute [50](payment_amount) [dollars](currency)
+      - The amount for payment is [600](payment_amount)
+      - I'm going to send [80](payment_amount) [euros](currency)
+      - I'd like to make a payment of [700](payment_amount)
+      - Please process a payment of [450](payment_amount)
+      - [100](payment_amount) [euros](currency)
+
+  - intent: provide_phone_number
+    examples: |
+      - [+1234567890](phone_number)
+      - The recipient's name is [+1234567890](phone_number)
+      - I’d like to send it to [+1234567890](phone_number)
+      - Please make the payment to [+1234567890](phone_number)
+      - The name of the recipient is [+1234567890](phone_number)
+      - Send it to [+1234567890](phone_number)
+      - I want to transfer to [+1234567890](phone_number)
+      - The person’s name is [+1234567890](phone_number)
+      - The recipient is [+1234567890](phone_number)
+      - I'd like to contribute to [+1234567890](phone_number)
+      - I am sending it to [+1234567890](phone_number)
+      - Let’s make the payment to [+1234567890](phone_number)
+      - The person I’m paying is [+1234567890](phone_number)
+      - I am transferring it to [+1234567890](phone_number)
+
+  - intent: account_management
+    examples: |
+      - Manage my account settings
+      - Change my account details
+      - Edit my account information
+      - Access my account settings
+      - Update my account information
+      - Modify my account details
+      - I want to change my account settings
+      - Help me update my profile
+      - Can I edit my account information?
+      - I need to access my account settings
+      - Please help me manage my account
+      - Update my personal details
+      - How do I change my account preferences?
+      - I want to review and update my account information
+      - Let me access my account settings
+
+  - intent: change_password
+    examples: |
+      - I want to change my password
+      - I want to change my password from [oldpassword123](current_password) to [newpassword456](new_password)
+      - Please update my password
+      - Can I update my password?
+      - I need to reset my password
+      - Change my password, please
+
+  - intent: provide_current_password
+    examples: |
+      - My current password is [oldpassword123](current_password)
+      - The password I'm currently using is [mypassword](current_password)
+      - Here is my current password: [abc123](current_password)
+      - It is [mypassword](current_password)
+      - [password123](current_password)
+      - [temporary123](current_password)
+      - My old password is [password123](current_password)
+      - I’m using [qwerty123](current_password) as my current password
+      - The existing password is [pass2021](current_password)
+      - My present password is [temporary123](current_password)
+      - I have been using [mypass1](current_password) as my current password
+      - The password I use now is [originalpass](current_password)
+      - My current one is [securepass789](current_password)
+
+  - intent: provide_new_password
+    examples: |
+      - I want to set my new password to [newpassword456](new_password)
+      - My new password will be [securepass789](new_password)
+      - Change it to [updatedpass2023](new_password)
+      - I’d like my new password to be [letmein2023](new_password)
+      - Set my password as [freshstart](new_password)
+      - [updatedpass2023](new_password)
+      - Use [newpass2](new_password) as my new password
+      - Please update my password to [newbeginning](new_password)
+      - The new password should be [passchange2023](new_password)
+      - My desired password is [futurepass](new_password)
+      - Change my password to [safeandsecure](new_password)
+
+  - intent: confirm_password_change
+    examples: |
+      - Yes, change it
+      - That's correct
+      - Yes, go ahead
+
+  - intent: forgot_password
+    examples: |
+      - I forgot my password
+      - Reset my password
+      - I can't remember my password
+      - I need help with password reset
+      - I forgot the password to my account
+      - Help me recover my password
+      - I need a password reset
+      - Can you assist me in resetting my password?
+      - I lost my password, help me reset it
+      - Forgot my login details, please reset the password
+      - My password is missing, can you help me recover it?
+      - How can I reset my password?
+      - I need to change my forgotten password
+      - Send me a link to reset my password
+
+  - intent: provide_email
+    examples: |
+      - My email is [johndoe@example.com](email)
+      - [johndoe@example.com](email)
+      - You can reach me at [janedoe@gmail.com](email)
+      - The email associated with my account is [user123@yahoo.com](email)
+      - Here’s my email: [contactme@domain.com](email)
+      - Use [example.email@provider.com](email) as my email
+      - The email I registered with is [sampleuser@outlook.com](email)
+      - I’d like to provide my email: [myname@company.org](email)
+      - My email address is [hello@world.com](email)
+      - Send it to [feedback@service.net](email)
+      - I’m using [info@mysite.com](email) for my account
+
+  - intent: edit_name
+    examples: |
+      - I want to change my name
+      - I need to update my name
+      - I want to edit my name
+      - Can you change my name?
+      - I want to change my name to [Brenda](new_name)
+      - Update my account name to [Alex](new_name)
+      - Edit my name on my profile
+      - Change my account name to [Yomi](new_name)
+      - I need to update my name to [Sarah](new_name)
+      - Can you change my name to [Emma](new_name)?
+      - I'd like to modify my name to [John](new_name)
+      - Please update my name to [David](new_name)
+      - Change the name on my profile to [Lily](new_name)
+      - Set my account name to [Mia](new_name)
+      - I want my new name to be [Liam](new_name)
+      - Update my profile with the name [Sophia](new_name)
+
+  - intent: provide_new_name
+    examples: |
+      - My new name is John Doe
+      - Change my name to Jane Doe
+      - I want to be called Alice Smith
+      - My new name should be Bob Johnson
+      - My new name is [djsgdy](new_name)
+      - Let's call it: [aaada](new_name)
+      - [sdfgfvc](new_name)
+
+  - intent: change_language
+    examples: |
+      - I want to change my language
+      - Set language to [English](language)
+      - Change my account language to [French](language)
+      - Switch language to [English](language)
+      - Change my language preference to [Spanish](language)
+      - I'd like to use [German](language) for the interface
+      - Set the system language to [Italian](language)
+      - Please change my language to [Portuguese](language)
+      - Switch my language to [Arabic](language)
+      - Change my preferred language to [Dutch](language)
+      - Can you set the language to [Chinese](language)?
+      - I'd like to switch to [Russian](language)
+
+  - intent: provide_language
+    examples: |
+      - I want to change it to English
+      - Change it to French
+      - Switch to Spanish
+      - I'd like to use German
+      - Make it Italian
+      - Let's go with Dutch
+      - Use Portuguese
+      - Switch language to Japanese
+      - I prefer Chinese
+      - Change it to Arabic
+      - Set it to Hindi
+      - I want Bengali
+      - Update to Russian
+      - Change my language to Korean
+      - Use Turkish
+      - Switch to Tamil
+      - Make it Greek
+      - Go with Vietnamese
+      - I want the language to be Swahili
+      - Change it to Zulu
+
+  - intent: top_up_balance
+    examples: |
+      - I want to top up my balance
+      - Add money to my wallet
+      - Can I add funds to my account?
+      - I want to recharge my account
+      - Please add money to my account
+      - Top up my account with [5000](top_up_amount)
+      - Increase my balance by [2000](top_up_amount)
+      - Deposit [100](top_up_amount) into my account
+      - Add [3000](top_up_amount) to my wallet
+      - Please top up my balance by [1000](top_up_amount)
+      - Add [1500](top_up_amount) to my account balance
+      - Top up [my account](account_name) with [2500](top_up_amount)
+      - Can you add [200](top_up_amount) to my balance?
+      - Please increase my wallet balance by [150](top_up_amount)
+
+  - intent: provide_top_up_amount
+    examples: |
+      - Top up with [5000](top_up_amount)
+      - I want to add [5000](top_up_amount) to my balance
+      - Top up my account with [3000](top_up_amount)
+      - Add [200](top_up_amount) to my wallet
+      - Increase my balance by [1000](top_up_amount)
+      - Deposit [150](top_up_amount) into my account
+      - I'd like to top up [2500](top_up_amount)
+      - Please add [1200](top_up_amount) to my account balance
+      - Top up my balance by [800](top_up_amount)
+      - I want to add [4000](top_up_amount)
+      - Put [500](top_up_amount) in my account
+
+  - intent: make_withdrawal
+    examples: |
+      - I want to make a withdrawal
+      - Withdraw from my wallet
+      - Withdraw [3000](withdrawal_amount) from my account
+      - Take out [5000](withdrawal_amount) from my balance
+      - I need to withdraw [2000](withdrawal_amount)
+      - Please withdraw [100](withdrawal_amount)
+      - Can I withdraw [1500](withdrawal_amount)?
+      - Take out [2500](withdrawal_amount) from my account
+      - I want to withdraw [5000](withdrawal_amount) now
+      - Withdraw the amount of [200](withdrawal_amount) from my balance
+      - I would like to withdraw [700](withdrawal_amount)
+
+  - intent: provide_withdrawal_amount
+    examples: |
+      - I want to withdraw [500](withdrawal_amount)
+      - Withdraw [1000](withdrawal_amount) please
+      - Make a withdrawal of [200](withdrawal_amount)
+      - Please withdraw [1500](withdrawal_amount)
+      - I’d like to take out [300](withdrawal_amount)
+      - The amount to withdraw is [250](withdrawal_amount)
+      - Withdraw an amount of [700](withdrawal_amount)
+      - Can I take out [800](withdrawal_amount)?
+      - I need to withdraw [1200](withdrawal_amount)
+      - Let’s withdraw [4000](withdrawal_amount)
+      - Make a deduction of [3000](withdrawal_amount) from my balance
+      - Please withdraw [10000](withdrawal_amount) from my account
+      - Take out [600](withdrawal_amount) for me
+      - Add a withdrawal of [900](withdrawal_amount)
+      - Top down by withdrawing [450](withdrawal_amount)
+      - My withdrawal amount is [2200](withdrawal_amount)
+
+  - intent: list_transactions
+    examples: |
+      - Show my latest transactions
+      - List my recent transactions for account [A12345](account_id)
+      - Display my transaction history
+      - Check recent account activity
+      - What are my recent transactions?
+      - Show my transaction list
+      - List all my past transactions
+      - Can you show my recent activity?
+      - Show transactions for this week
+      - Retrieve my last few transactions
+      - List transactions for account [B67890](account_id)
+
+  - intent: file_complaint
+    examples: |
+      - I have a complaint
+      - Report an issue
+      - I have a problem with my [transaction](complaint_topic)
+      - Need help with [payment issue](complaint_topic)
+      - I want to file a complaint about [account issue](complaint_topic)
+      - I have an issue with [withdrawal](complaint_topic)
+      - There was a problem with my [deposit](complaint_topic)
+      - I want to report a [technical problem](complaint_topic)
+      - There's an issue with my [subscription](complaint_topic)
+      - I'm having trouble with my [balance](complaint_topic)
+
+  - intent: provide_complaint_topic
+    examples: |
+      - My complaint is about [transaction](complaint_topic)
+      - I'm facing an issue with [payment issue](complaint_topic)
+      - I have a problem with [account issue](complaint_topic)
+      - There's a [technical problem](complaint_topic)
+
+  - intent: provide_account_id
+    examples: |
+      - My account ID is [12345](account_id)
+      - Here is my ID: [67890](account_id)
+      - [67890](account_id)
+
+  - intent: view_pending_swaps
+    examples: |
+      - Show me my pending swaps
+      - Do I have any pending swaps?
+      - Can you give me a list of my pending swaps?
+      - I want to see my pending swaps
+      - Are there any pending swaps for me?
+
+  - intent: cancel_swap
+    examples: |
+      - Cancel my swap
+      - I want to cancel my swap
+      - Please cancel the swap with ID {swap_id}
+      - Abort my swap
+      - Can you cancel my swap for me?
+
+  - intent: confirm_swap
+    examples: |
+      - Confirm my swap
+      - I confirm my swap
+      - Yes, proceed with the swap
+      - Confirm swap {swap_id}
+
+  - intent: reject_swap
+    examples: |
+      - Reject my swap
+      - I want to reject the swap
+      - Decline the swap with ID {swap_id}
+
+
+

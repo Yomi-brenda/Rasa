@@ -1,0 +1,547 @@
+version: "3.1"
+
+intents:
+  - greet
+  - bot_challenge
+  - about_toupesu
+  - benefits_of_toupesu
+  - contact_support
+  - security_features
+  - services_offered
+  - how_to_use_toupesu
+  - contribute_to_tontine
+  - provide_tontine_name
+  - provide_contribution_amount
+  - confirm_contribution
+  - check_balance
+  - provide_user_id
+  - join_tontine
+  - provide_name_tontine
+  - confirm_join
+  - create_new_tontine
+  - provide_tontine_new_name
+  - provide_tontine_type
+  - provide_tontine_duration
+  - provide_contribution_frequency
+  - provide_new_contribution_amount
+  - provide_payout_strategy
+  - provide_purpose
+  - provide_target_audience
+  - provide_starting_currency
+  - provide_amount_to_receive
+  - get_tontine_options
+  - access_open_tontine_services
+  - confirm
+  - create_project_tontine
+  - provide_project_name
+  - provide_purposes 
+  - provide_amount
+  - provide_duration
+  # - provide_frequency
+  - contribute_to_project_tontine
+  - make_swap_request
+  - provide_target_currency
+  - provide_starting_amount
+
+  - view_pending_swaps
+  - cancel_swap
+  - confirm_swap
+  - reject_swap
+
+  - list_pending_swaps
+  - provide_swap_id
+  - make_payment
+  - deny
+  - provide_payment_amount
+  - provide_recipient_name
+  - account_management
+  - change_password
+  - provide_current_password
+  - provide_new_password
+  - forgot_password
+  - provide_email
+  - edit_name
+  - change_language
+  - top_up_balance
+  - provide_top_up_amount
+  - provide_account_name
+  - make_withdrawal
+  - provide_withdrawal_amount
+  - list_transactions
+  - file_complaint
+  - provide_new_name
+  - provide_language
+  - provide_account_id
+  - provide_complaint_topic
+
+entities:
+  - tontine_name
+  - contribution_amount
+  - user_id
+  - balance
+  - name_tontine
+  - id_user
+  - tontine_new_name
+  - tontine_type
+  - tontine_duration
+  - contribution_frequency
+  - new_contribution_amount
+  - payout_strategy
+  - purpose
+  - target_audience
+  - starting_currency
+  - amount_to_receive
+  - project_name
+  - purposes
+  - swap_id
+  - swap_status
+  - duration
+  - target_currency
+  - starting_amount
+  - payment_amount
+  - recipient_name
+  - phone_number
+  - currency
+  - current_password
+  - new_password
+  - email
+  - new_name
+  - language
+  - top_up_amount
+  - account_name
+  - withdrawal_amount
+  - account_id
+  - complaint_topic
+
+slots:
+  swap_status:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: swap_status
+  tontine_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tontine_name
+  purposes:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: purposes
+  contribution_amount:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: contribution_amount
+  user_id:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: user_id
+  balance:
+    type: float 
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: balance
+  name_tontine:
+    type: text 
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name_tontine
+  tontine_new_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tontine_new_name
+  tontine_type:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tontine_type
+  tontine_duration:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: tontine_duration
+  contribution_frequency:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: contribution_frequency
+  new_contribution_amount:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: new_contribution_amount
+  payout_strategy:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: payout_strategy
+  purpose:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: purpose
+  target_audience:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: target_audience
+  starting_currency:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: starting_currency
+  amount_to_receive:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: amount_to_receive
+  project_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: project_name
+  duration:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: duration
+  amount:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: amount
+  target_currency:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: target_currency
+  starting_amount:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: starting_amount
+  swap_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: swap_id
+  payment_amount:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: payment_amount
+  recipient_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: recipient_name
+  phone_number:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: phone_number
+  account_info:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  current_password:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        entity: current_password
+  new_password:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        entity: new_password
+  email:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        entity: email
+  reset_status:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+  currency:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_text
+        entity: currency
+  new_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: new_name
+  language:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: language
+  top_up_amount:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: top_up_amount
+  account_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: account_name
+  withdrawal_amount:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: withdrawal_amount
+  account_id:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: account_id
+  complaint_topic:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: complaint_topic
+
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa :), how can i assit you?."
+  utter_about_toupesu:
+    - text: "Toupesu is a platform designed to offer various services such as tontine management, community projects, and secure currency exchange among users. It enables users to manage contributions, participate in community events, and match with others for financial transactions. Toupesu aims to make collaborative financial services easy and accessible to all."
+  utter_benefits_of_toupesu:
+    - text: "Toupesu provides a convenient, secure platform for collaborative finance and currency exchange, with user-focused features like tontine management, community support, and an easy-to-use interface. Our services are designed to make financial management accessible and efficient."
+  utter_contact_support:
+    - text: "You can reach Toupesu's support team by using the 'Contact Support' option in the app or on our website. Our team is here to assist you with any questions or issues you may have regarding your account or our services."
+  utter_how_to_use_toupesu:
+    - text: |
+        Using Toupesu is simple! Here are the steps:
+        1. Register or log in to your account.
+        2. Choose a tontine or create a new one.
+        3. Set your contribution details.
+        4. Monitor and manage your tontines and payouts.
+        Let me know if you need more details on any specific feature.
+  utter_security_features:
+    - text: |
+        Toupesu prioritizes your security. Here are our key features:
+        1. Secure data encryption for all user information.
+        2. Multi-factor authentication for account access.
+        3. Regular system audits to ensure safety.
+        4. Transparent handling of your data with GDPR compliance.
+        Let us know if you have further security-related concerns.
+  utter_services_offered:
+    - text: |
+        Toupesu offers a variety of services, including tontine contributions, community project management, account management, currency exchange, and customer support. Whether you're looking to manage funds collaboratively or exchange currency securely, Toupesu is here to help.
+  utter_ask_tontine_name:
+    - text: "Please provide the name of the tontine"
+  utter_ask_contribution_amount:
+    - text: "How much would you like to contribute?"
+  utter_ask_user_id:
+    - text: "Please provide your user ID."
+  utter_ask_contribution_confirmation:
+    - text: "You are about to contribute {contribution_amount} to {tontine_name}. Please reply 'Confirm Contribution' or 'Cancel Contribution'."
+  utter_contribution_failed:
+    - text: "We couldn't process your contribution to {tontine_name}. Please try again."
+  # utter_show_balance:
+  #   - text: "Your current balance is {balance}"
+  utter_ask_name_tontine:
+    - text: "Please provide the name of the tontine you want to join."
+  utter_ask_confirmation:
+    - text: "Would you like to confirm joining {tontine_name}? Please reply 'Confirm joining' or 'Cancel'."
+  utter_join_success:
+    - text: "You have successfully joined the tontine: {tontine_name}."
+  utter_ask_tontine_new_name:
+    - text: "Please provide a name for the new tontine."
+  utter_ask_tontine_type:
+    - text: "What type of tontine are you interested in? (e.g., community, family, business)"
+  utter_ask_tontine_duration:
+    - text: "What duration do you prefer for the tontine? (e.g., 6 months, yearly)"
+  utter_ask_new_contribution_amount:
+    - text: "What is the total amount to be contributed?"
+  utter_ask_payout_strategy:
+    - text: "What payout strategy will you use for this tontine?"
+  utter_ask_purpose:
+    - text: "What is the purpose of this tontine?"
+  utter_ask_target_audience:
+    - text: "Who is the target audience for this tontine?"
+  utter_ask_starting_currency:
+    - text: "What is the currency you'd like to start with?"
+  utter_ask_amount_to_receive:
+    - text: "Please specify the amount to receive upon payout."
+  utter_confirm_tontine_creation:
+    - text: "The tontine '{tontine_new_name}' has been successfully created with the specified details."
+  # utter_list_tontine_options:
+    # - text: "Here are the tontine options available: {tontine_options}"
+  utter_ask_if_join_tontine:
+    - text: "Would you like to join a tontine? If Yes, type: Join tontine."
+  utter_ask_contribution_frequency:
+    - text: "How often would you like to contribute? (e.g., weekly, monthly, annually)"
+  utter_ask_duration:
+    - text: "What is the duration of this project?"
+  utter_ask_purposes:
+    - text: "What is the purpose of this project tontine?"
+  utter_ask_project_name:
+    - text: "Please provide a project tontine name."
+  utter_confirm_project_contribution:
+    - text: "You are about to contribute {contribution_amount} to the project '{project_name}'." 
+  utter_ask_amount_contribution:
+    - text: "How much would you like to contribute to this project?"
+  utter_ask_target_currency:
+    - text: "Which currency would you like to receive?"
+  utter_ask_starting_amount:
+    - text: "How much would you like to swap?"
+  utter_ask_amount_to_receives:
+    - text: "How much do you expect to receive after the swap?"
+  utter_confirm_swap_request:
+    - text: "You are about to exchange {starting_amount} {starting_currency} to receive {amount_to_receive} {target_currency}. I'm processing your swap request now."
+  utter_swap_success_confirmation:
+    - text: "" 
+  utter_ask_payment_amount:
+    - text: "How much would you like to pay?"
+  utter_ask_phone_number:
+    - text: "Who would you like to pay? Please provide their phone number."
+  utter_confirm_payment:
+    - text: "You are about to pay {payment_amount} to {phone_number}. Is that correct? Yes or No"
+  utter_payment_success:
+    - text: "Your payment of {payment_amount} to {phone_number} was successful."
+  utter_payment_failed:
+    - text: "We encountered an issue with your payment. Please try again."
+  utter_account_management:
+    - text: "You can manage your account settings here. Please let me know what you would like to update or modify."  
+  utter_ask_current_password:
+    - text: "Please provide your current password to proceed."
+  utter_ask_new_password:
+    - text: "What would you like your new password to be?"
+  utter_confirm_password_change:
+    - text: "You are about to change your password. Please answer either 'Yes, change it' or 'Cancel'"
+  utter_password_change_success:
+    - text: "Your password has been successfully changed!"
+  utter_ask_email_for_reset:
+    - text: "Please provide your email address to reset your password."
+  utter_password_reset_link_sent:
+    - text: "A password reset link has been sent to your email."
+  utter_ask_new_name:
+    - text: "Please tell me the new name you'd like to set."
+  utter_name_update_successful:
+    - text: "Your name has been successfully updated."
+  utter_name_update_failed:
+    - text: "There was an error updating your name. Please try again later."
+  utter_email_not_found:
+    - text: "The provided email address is not registered. Please try again."
+  utter_language_changed:
+    - text: "Your language has been changed to {language}."
+
+  utter_ask_top_up_amount:
+    - text: "How much would you like to top up?"
+  utter_ask_email:
+    - text: "Please provide your registered email address."
+  utter_balance_top_up_successful:
+    - text: "Your balance has been successfully topped up."
+  utter_balance_top_up_failed:
+    - text: "There was an error topping up your balance. Please try again later."
+  utter_balance_withdraw_successful:
+    - text: "Your withdrawal has been successfully processed."
+  utter_balance_insufficient_funds:
+    - text: "You do not have enough balance to make this withdrawal."
+  utter_balance_withdraw_failed:
+    - text: "There was an error processing your withdrawal. Please try again later."
+
+  
+  
+  # utter_top_up_failed:
+    # - text: "Sorry, I couldn't process the top-up at the moment. Please try again later."    
+  utter_ask_withdrawal_amount:
+    - text: "How much would you like to withdraw?"
+  utter_withdrawal_success:
+    - text: "Your withdrawal was successful."
+  utter_ask_account_id:
+    - text: "Please provide your account ID to view transactions."
+  utter_list_transactions_success:
+    - text: "Here are your recent transactions: [transaction data]."
+  utter_ask_complaint_topic:
+    - text: "Could you please specify the issue you're facing?"
+  utter_complaint_success:
+    - text: "Thank you for your complaint regarding '{complaint_topic}'. We will review it and get back to you shortly."    # - text: |
+    #     Toupesu uses industry-standard encryption and secure authentication methods to ensure the safety of your account and transactions. We prioritize your privacy and work continuously to maintain a secure environment for all users.
+  utter_ask_language:
+    - text: "Please enter the language you wish to change to."
+
+  utter_ask_for_user_id:
+    - text: "Could you please provide your user ID so I can fetch your pending swaps?"
+  utter_no_pending_swaps:
+    - text: "You have no pending swaps at the moment."
+  utter_pending_swaps_list:
+    - text: "Here are your pending swaps:\n{swaps_list}"
+  utter_swap_cancelled:
+    - text: "Your swap has been successfully cancelled."
+  utter_swap_confirmed:
+    - text: "Your swap has been confirmed and processed."
+  utter_swap_rejected:
+    - text: "Your swap has been rejected."
+
+actions:
+  - action_contribute_to_tontine
+  - action_join_tontine
+  - action_check_balance
+  - action_confirm_tontine_creation
+  - action_create_new_tontine
+  - action_list_tontine_options
+  - action_access_open_tontine_services
+  - action_create_project_tontine
+  - action_contribute_to_project_tontine
+  - action_make_swap_request
+  - action_join_tontine_success
+  - action_list_pending_swaps
+  - action_process_payment 
+  - action_manage_account
+  - action_change_password
+  - action_make_withdrawal
+  - action_reset_password
+  - action_edit_name
+  - action_set_language
+  - action_top_up_balance
+  - action_detect_language
+  - action_list_transactions
+  - action_file_complaint
+
+  - action_ask_tontine_type
+  - action_ask_tontine_duration
+  - action_ask_contribution_amount
+  - action_ask_swap_id
+  - action_make_payment_confirmation
+
+  - action_get_pending_swaps
+  - action_cancel_swap
+  - action_confirm_swap
+  - action_reject_swap
+  - action_query_database
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
